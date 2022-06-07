@@ -1,0 +1,69 @@
+.answers {
+    // position: relative;
+    padding-top: 150px;
+    background-color: #e5e5e5;
+    // z-index: 6;
+    &__title {
+        text-align: center;
+        margin-bottom: 85px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 20;
+    }
+    &__item {
+        width: 700px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 630px;
+        margin-bottom: 20px;
+        margin-left: 4px;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s ease-out;
+    }
+    &__item-title {
+        position: relative;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 19px 15px 19px 24px;
+        width: 700px;
+        height: 60px;
+        background-color: #fff;
+        border: 1px solid #0070AF;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: 22px;
+        // margin-bottom: 20px;
+        transition:  0.5s all;
+        cursor: pointer;
+        p {
+            font-size: 18px;
+            line-height: 22px;
+            color: #0070AF;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 15px;
+            background: url('../icons/answers/answers-icon.svg') center no-repeat;
+        }
+    }
+    &__title-mobile {
+        display: none;
+    }
+}
+.active::after {
+    background: url('../icons/answers/answers-icon-active.svg') center no-repeat;
+}

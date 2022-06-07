@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap');
+
+
+@import 'libs/animate';
+@import 'libs/swiper.min';
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #0d0d0d;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+a {
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-size: inherit;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+
+
+.main {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background: url('../img/main-bg.png') center (center / cover) no-repeat !important;
+        height: 100%;
+        z-index: 0;
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+
+.show {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.hide {
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.over {
+    position: relative;
+    z-index: 10;
+     &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 476px;
+        bottom: 250px;
+        left: 0;
+        background: url('../img/evaluate/evaluate-bg.png') center no-repeat;
+        
+    }
+}
+
+
+
+.vissible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+
+
+@import 'blocks/header';
+@import 'blocks/services';
+@import 'blocks/buttons';
+@import 'blocks/about';
+@import 'blocks/safety';
+@import 'blocks/titles';
+@import 'blocks/our';
+@import 'blocks/galery';
+@import 'blocks/section';
+@import 'blocks/evaluate';
+@import 'blocks/features';
+@import 'blocks/order';
+@import 'blocks/answers';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/video';
+@import 'blocks/media';
